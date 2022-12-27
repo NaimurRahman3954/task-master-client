@@ -2,7 +2,11 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import Main from '../Layout/Main'
 import PageNotFound from '../Pages/404/PageNotFound'
-import Home from '../Pages/Home/Home'
+import Login from '../Pages/Login/Login'
+import Register from '../Pages/Login/Register'
+import AddTask from '../Pages/Tasks/AddTask'
+import CompletedTasks from '../Pages/Tasks/CompletedTasks'
+import MyTasks from '../Pages/Tasks/MyTasks'
 
 const Router = createBrowserRouter([
   {
@@ -11,20 +15,24 @@ const Router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>,
+        element: <MyTasks></MyTasks>,
         loader: () => fetch(''),
       },
       {
         path: '/home',
-        //   element: <Home></Home>,
+        element: <MyTasks></MyTasks>,
       },
       {
-        path: '/categories',
-        //   element: <Categories></Categories>,
+        path: '/my-tasks',
+        element: <MyTasks></MyTasks>,
       },
       {
-        path: '/blog',
-        //   element: <Blog></Blog>,
+        path: '/completed-tasks',
+        element: <CompletedTasks></CompletedTasks>,
+      },
+      {
+        path: '/add-task',
+        element: <AddTask></AddTask>,
       },
       {
         path: '/login',
