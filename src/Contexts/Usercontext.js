@@ -11,8 +11,8 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth'
-import { useEffect } from 'react'
 import app from '../Firebase/firebase.init'
+import { useEffect } from 'react'
 
 export const AuthContext = createContext()
 const auth = getAuth(app)

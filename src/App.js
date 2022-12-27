@@ -10,7 +10,7 @@ import '@fontsource/roboto/700.css'
 function App() {
   return (
     <div className="App">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="">
         {/* check this later ↑ 🛑 */}
         <RouterProvider router={Router}></RouterProvider>
       </div>

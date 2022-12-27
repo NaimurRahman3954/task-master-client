@@ -4,12 +4,16 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import UserContext from './Contexts/Usercontext'
+import { StyledEngineProvider } from '@mui/material'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <UserContext>
-      <App />
+      <StyledEngineProvider injectFirst>
+        {/* Your component tree. Now you can override MUI's styles. */}
+        <App />
+      </StyledEngineProvider>
     </UserContext>
   </React.StrictMode>
 )

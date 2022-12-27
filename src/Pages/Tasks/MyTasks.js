@@ -3,7 +3,7 @@ import React from 'react'
 const MyTasks = () => {
   return (
     <div>
-      <h3>This is My Tasks</h3>
+      <h3 className="">This is My Tasks!</h3>
     </div>
   )
 }
