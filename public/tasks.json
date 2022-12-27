@@ -1,0 +1,74 @@
+[
+   {
+     "task": "Write a report on the benefits of exercise",
+     "image": "https://i.imgur.com/Gz1QfKj.jpg",
+     "dueDate": "2023-01-01",
+     "completed": false
+   },
+   {
+     "task": "Create a budget plan for the next year",
+     "image": "https://i.imgur.com/qNXZmuL.jpg",
+     "dueDate": "2023-02-01",
+     "completed": false
+   },
+   {
+     "task": "Book a vacation to Hawaii",
+     "image": "https://i.imgur.com/eOyj9oM.jpg",
+     "dueDate": "2023-03-01",
+     "completed": false
+   },
+   {
+     "task": "Attend a cooking class",
+     "image": "https://i.imgur.com/f6u2VrA.jpg",
+     "dueDate": "2023-04-01",
+     "completed": false
+   },
+   {
+     "task": "Go on a hike in the mountains",
+     "image": "https://i.imgur.com/cTZ9X9b.jpg",
+     "dueDate": "2023-05-01",
+     "completed": false
+   },
+   {
+     "task": "Take a dance class",
+     "image": "https://i.imgur.com/8zntRJL.jpg",
+     "dueDate": "2023-06-01",
+     "completed": false
+   },
+   {
+     "task": "Visit a new city",
+     "image": "https://i.imgur.com/xL0VJYv.jpg",
+     "dueDate": "2023-07-01",
+     "completed": false
+   },
+   {
+     "task": "Start a garden",
+     "image": "https://i.imgur.com/Jf1xWkk.jpg",
+     "dueDate": "2023-08-01",
+     "completed": false
+   },
+   {
+     "task": "Learn a new language",
+     "image": "https://i.imgur.com/mKj1xHx.jpg",
+     "dueDate": "2023-09-01",
+     "completed": false
+   },
+   {
+     "task": "Join a gym",
+     "image": "https://i.imgur.com/dvJwzM6.jpg",
+     "dueDate": "2023-10-01",
+     "completed": false
+   },
+   {
+     "task": "Create a resume",
+     "image": "https://i.imgur.com/U2BZUwB.jpg",
+     "dueDate": "2023-11-01",
+     "completed": false
+   },
+   {
+     "task": "Plan a road trip",
+     "image": "https://i.imgur.com/CnhDApx.jpg",
+     "dueDate": "2023-12-01",
+     "completed": false
+   }
+ ]
