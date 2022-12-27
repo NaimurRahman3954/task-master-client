@@ -1,6 +1,8 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import Main from '../Layout/Main'
+import PageNotFound from '../Pages/404/PageNotFound'
+import Home from '../Pages/Home/Home'
 
 const Router = createBrowserRouter([
   {
@@ -9,7 +11,7 @@ const Router = createBrowserRouter([
     children: [
       {
         path: '/',
-        //   element: <Home></Home>,
+        element: <Home></Home>,
         loader: () => fetch(''),
       },
       {
@@ -39,7 +41,7 @@ const Router = createBrowserRouter([
           {
             /* <Products></Products> */
           },
-          //  </PrivateRoute>
+        //  </PrivateRoute>
         loader: ({ params }) =>
           fetch(
             `https://assignment-12-server-sage.vercel.app/categories/${params.id}`
@@ -54,7 +56,7 @@ const Router = createBrowserRouter([
       {
         /* <DashboardLayout></DashboardLayout> */
       },
-      // </PrivateRoute>
+    // </PrivateRoute>
     children: [
       {
         path: '/dashboard',
@@ -89,7 +91,7 @@ const Router = createBrowserRouter([
           {
             /* <MyProducts></MyProducts> */
           },
-          //  </AdminRoute>
+        //  </AdminRoute>
       },
       {
         path: '/dashboard/payment/:id',
@@ -103,7 +105,7 @@ const Router = createBrowserRouter([
   },
   {
     path: '*',
-    //  element: <PageNotFound></PageNotFound>,
+    element: <PageNotFound></PageNotFound>,
   },
 ])
 
