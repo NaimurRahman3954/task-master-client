@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const TaskCard = (props) => {
-  const { _id, title, photo, products } = props.task
+  const { _id, task, photo, dueDate } = props.task
   return (
     <div>
       <div className="m-5 w-96 h-[30vh]">
@@ -11,16 +11,16 @@ const TaskCard = (props) => {
             <img src={photo} alt="" width={50} height={50} />
           </figure>
           <div className="card-body bg-base-200 rounded-r-xl">
-            <h2 className="card-title">{title}</h2>
+            <h2 className="card-title">{task}</h2>
             <div className="card-actions justify-start">
               <div className="badge badge-outline badge-error">
-                {products.length} products available
+                Due Date: {dueDate}
               </div>
             </div>
             <div className="card-actions justify-start w-full mt-3">
-              <Link to={`/categories/${_id}`}>
+              <Link to={`/tasks/${_id}`}>
                 <button className="btn btn-outline btn-md btn-primary">
-                  Explore →
+                  Details →
                 </button>
               </Link>
             </div>

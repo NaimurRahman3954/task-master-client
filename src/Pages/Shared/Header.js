@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -56,7 +57,8 @@ const Header = () => {
               textDecoration: 'none',
             }}
           >
-            Task Master
+             {/* <Link to="/" className=''>Task Master</Link> */}
+             Task Master
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
