@@ -7,6 +7,7 @@ import Register from '../Pages/Login/Register'
 import AddTask from '../Pages/Tasks/AddTask'
 import CompletedTasks from '../Pages/Tasks/CompletedTasks'
 import MyTasks from '../Pages/Tasks/MyTasks'
+import TaskDetails from '../Pages/Tasks/TaskDetails'
 
 const Router = createBrowserRouter([
   {
@@ -43,16 +44,11 @@ const Router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: '/categories/:id',
-        element:
-          //  <PrivateRoute>
-          {
-            /* <Products></Products> */
-          },
-        //  </PrivateRoute>
+        path: '/tasks/:id',
+        element: <TaskDetails></TaskDetails>,
         loader: ({ params }) =>
           fetch(
-            `https://assignment-12-server-sage.vercel.app/categories/${params.id}`
+            `https://task-master-server-one.vercel.app/tasks/${params.id}`
           ),
       },
     ],

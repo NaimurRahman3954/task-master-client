@@ -5,16 +5,21 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import UserContext from './Contexts/Usercontext'
 import { StyledEngineProvider } from '@mui/material'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
     <UserContext>
       <StyledEngineProvider injectFirst>
         {/* Your component tree. Now you can override MUI's styles. */}
         <App />
       </StyledEngineProvider>
     </UserContext>
+    </QueryClientProvider>
   </React.StrictMode>
 )
 

@@ -90,11 +90,27 @@ const Header = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link to="/add-task">
+                   <Typography textAlign="center">Add Task</Typography>
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link to="/my-tasks">
+                   <Typography textAlign="center">My Tasks</Typography>
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link to="/completed-tasks">
+                   <Typography textAlign="center">Completed Tasks</Typography>
+                  </Link>
+                </MenuItem>
+
+              {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -120,7 +136,22 @@ const Header = () => {
             className="flex justify-center gap-12"
             sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
           >
-            {pages.map((page) => (
+            <MenuItem onClick={handleCloseNavMenu}>
+             
+                <Typography textAlign="center"> <Link to="/add-task">Add Task </Link></Typography>
+             
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Link to="/my-tasks">
+                <Typography textAlign="center">My Tasks</Typography>
+              </Link>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Link to="/completed-tasks">
+                <Typography textAlign="center">Completed Tasks</Typography>
+              </Link>
+            </MenuItem>
+            {/* {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -128,7 +159,7 @@ const Header = () => {
               >
                 {page}
               </Button>
-            ))}
+            ))} */}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
