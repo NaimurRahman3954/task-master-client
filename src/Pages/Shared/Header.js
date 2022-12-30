@@ -41,7 +41,7 @@ const Header = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-          <img src="./todo-icon.png" alt="logo" className="h-6 mr-3" />
+           <img src="./todo-icon.png" alt="logo" className="h-6 mr-3 hidden lg:block"/>
           <Typography
             variant="h6"
             noWrap
@@ -113,41 +113,42 @@ const Header = () => {
               ))} */}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
+          <Box>
+           <img src="./todo-icon.png" alt="logo" className="h-6 mr-3 lg:hidden sm:block" />
+           <Typography
+            variant="h6"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
-          >
-            LOGO
-          </Typography>
+            className="lg:hidden sm:block"
+           >
+             {/* <Link to="/" className=''>Task Master</Link> */}
+             Task Master
+           </Typography>
+          </Box>
           <Box
-            className="flex justify-center gap-12"
-            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+            className="lg:flex justify-center gap-12"
+            sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' } }}
           >
-            <MenuItem onClick={handleCloseNavMenu}>
-             
-                <Typography textAlign="center"> <Link to="/add-task">Add Task </Link></Typography>
-             
+            <MenuItem onClick={handleCloseNavMenu}> 
+                <Typography textAlign="center"> <Link to="/add-task" className="text-white no-underline">Add Task </Link></Typography>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
-              <Link to="/my-tasks">
+              <Link to="/my-tasks"  className="text-white no-underline">
                 <Typography textAlign="center">My Tasks</Typography>
               </Link>
             </MenuItem>
             <MenuItem onClick={handleCloseNavMenu}>
-              <Link to="/completed-tasks">
+              <Link to="/completed-tasks" className="text-white no-underline">
                 <Typography textAlign="center">Completed Tasks</Typography>
               </Link>
             </MenuItem>
