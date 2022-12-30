@@ -6,9 +6,9 @@ const TaskDetails = () => {
    const { task, image, dueDate, completed} = taskObj
    return (
       <div>
+
          <h3>{task}</h3>
          <h3>{dueDate}</h3>
-
       </div>
    );
 };
